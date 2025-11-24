@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+body {
+    background-color: #1E1E1E;
+    font-family: sans-serif;
+
+}
+
+.container {
+    width: 800px;
+    margin: 56px auto 0;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    margin: 56px 0 48px;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+h1 span {
+    color: #E3482B;
+    font-family: "Roboto Mono", sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    line-height: 200%;
+}
+
+p + p {
+    margin: 32px 0 52px;
+}
+
+p span {
+    color: #E3A32B;
+}
+
+
+a {
+    color: #E39B77;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+
+.links {
+    border-top: 1px solid #fff;
+    padding-top: 24px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+}
