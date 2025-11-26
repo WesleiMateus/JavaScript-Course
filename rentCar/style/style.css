@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -31,7 +32,6 @@ header nav{
     align-items: end;
     gap: 18px;
 
-    -webkit-font-smoothing: antialiased;
 }
 
 header.car:hover { cursor: pointer; }
@@ -135,6 +135,7 @@ section.marcas .logo-das-marcas {
     border: none;
     color: white;
     align-self: center;
+    cursor: pointer;
 }
 
 .textos {
