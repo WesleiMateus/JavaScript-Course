@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/reserva.css">
+    <title>Rent a Car</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+    
+            <a href="#">
+                <img src="/rentCar/assets/Group.svg" alt="Imagem de um carro da empresa rentCar" class="car">
+            </a>
+    
+            <nav>
+    
+                <a href="/rentCar/home.html" >Inicio</a>
+                <a href="#" target="_blank">Carros</a>
+                <a href="#" class="reserva">Reserva</a>
+    
+            </nav>
+    
+            <button>
+    
+                <span>Login</span>
+                <img src="/rentCar/assets/out.svg" alt="Botão de Login do Site">
+    
+            </button>
+        </header>
+    
+        <main>
+            
+            
+            <form action="https://httpbin.org/post" method="post">
+                
+                <div class="dados">
+                    <h1>Insira seus dados</h1>
+                    <button type="reset">
+                        <span href="#">Limpar Formulário</span>
+                    </button>
+                </div>
+                
+                <hr>
+
+                <label for="name">Nome <span class="aste">*</span></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email <span class="aste">*</span></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="age">Idade <span class="aste">*</span></label>
+                <input type="number" id="age" name="age" required>
+                
+                <div class="reserva">
+                    <h2>Reserva</h2>
+                </div>
+    
+                <hr>
+
+                <label for="modelo">Modelo do carro <span class="aste">*</span></label>
+
+                <select name="modelo" id="modelo">
+
+                    <option value="selecioneUmValor" selected disabled>Selecione o veículo:</option>
+                    
+                    <optgroup label="Lamborghini">
+                        <option value="aventador">Aventador</option>
+                        <option value="urus">Urus</option>
+                        <option value="revuelto">Revuelto</option>
+                    </optgroup>
+
+                    <optgroup label="Ferrari">
+                        <option value="sangue">Puro Sangue</option>
+                        <option value="f40">F40</option>
+                        <option value="laferrari">La Ferrari</option>
+                    </optgroup>
+
+                    <optgroup label="Ford">
+                        <option value="gt40">Mustang GT 40</option>
+                        <option value="ranger">Ranger 2026</option>
+                        <option value="silverado">Silverado 2026</option>
+                    </optgroup>
+                </select>
+
+                <div class="principal-data">
+                    
+                    <div class="data">
+    
+                        <label for="date">Data <span class="aste">*</span></label>
+                        <input type="date" id="date" name="date" required>
+    
+                    </div>
+                    
+                    <div class="hora">
+    
+                        <label for="time">Hora <span class="aste">*</span></label>
+                        <input type="time" id="time" name="time" required>
+    
+                    </div>
+
+                </div>
+
+                <div class="receber-em-casa-check">
+       
+                    <input type="checkbox" name="emCasa" id="emCasa" value="Sim!-ReceberEmCasa" >
+                    <label for="emCasa" class="emcasa">Receber em casa?</label>
+                    
+                </div>
+
+                <label for="observacao">Obervações</label>
+                <textarea name="observacao" id="observacao"></textarea>
+
+                <div class="buttons">
+
+                    <a href="/rentCar/home.html" class="cancelar">
+                        Retornar ao Inicio
+                    </a>
+
+                    <button type="submit">
+                        Enviar
+                    </button>
+
+                </div>
+
+            </form>
+            
+
+        </main>
+
+    </div>
+    
+    <!-- <footer>
+        <h5 class="creditos">Criado por <strong>@dev_weslei</strong></h5>
+    </footer> -->
+
+</body>
+
+</html>
