@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
+
+
+:root {
+    --primary: #8E7ADA;
+    --neutral-100: #FFFFFF;
+    --neutral-200: #F7F7F7;
+    --neutral-300: #E0E0E0;
+    --neutral-600: #4F4F4F;
+    --neutral-800: #18171C;
+    --neutral-900: #000000;
+
+    --font-bevan: "Bevan", serif;
+
+    --base-vertical-padding: 64px;
+    --base-horizontal-padding: 64px;
+    --line-height: 1.5;
+    --h1: 60px;
+    --h2: 48px;
+    --h3: 24px;
+}
+
+@media ( max-width: 860px ){
+    :root {
+        --base-horizontal-padding: 24px;
+        --base-vertical-padding: 40px;  
+
+        --line-height: 1.25;
+        --h1: 32px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: var(--neutral-800);
+    font-family: var(--font-bevan);
+}
+
+header {
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+
+.div-header {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 24px var(--base-horizontal-padding);
+}
+
+.div-header button {
+    cursor: pointer;
+    background-color: var(--primary);
+    border: none;
+    padding: 10px 45px;
+    border-radius: 8px;
+    color: var(--neutral-100);
+    font-family: sans-serif;
+}
+
+.apresentacao {
+    background-color: var(--neutral-200);
+}
+
+.apresentacao-container {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 24px;
+
+    padding: calc(var(--base-vertical-padding) / 2) var(--base-horizontal-padding) var(--base-vertical-padding);
+}
+
+.apresentacao-container h1 {
+    text-align: center;
+    font-size: var(--h1);
+    line-height: var(--line-height);
+    letter-spacing: 1.2px;
+}
+
+.facesheet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.facesheet span {
+    color: var(--primary);
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.facesheet h2 {
+    font-size: var(--h2);
+    max-width: 600px;
+    line-height: var(--line-height);
+}
+
+.facesheet p {
+    color: var(--neutral-600);
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.32px;
+}
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--base-horizontal-padding) var(--base-vertical-padding);
+}
+
+.container .focus-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.container .focus-area img {
+    width: 100%;
+}
+
+@media ( max-width: 840px ) {
+
+    .container .focus-area {
+        grid-template-columns: 1fr;
+        grid-template-areas: "top" "bottom";
+    }
+
+    .container .focus-area img { grid-area: top;}
+    .container .focus-area ul { grid-area: bottom;}
+}
+
+.container .focus-area h3 {
+    font-size: var(--h3);
+}
+
+.container .focus-area ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.container .focus-area ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: sans-serif;
+    letter-spacing: 1.2px;
+    max-width: 510px;
+    line-height: 1.32;
+}
+
+.team {
+    background-color: var(--neutral-300);
+}
+
+.container-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--base-vertical-padding) var(--base-horizontal-padding);
+}
+
+.container-team h3 {
+    font-size: var(--h3);
+    letter-spacing: 1.2px;
+}
+
+.container-team span {
+    color: var(--neutral-600);
+    font-family: sans-serif;
+    margin-bottom: 40px;
+}
+
+.colaboradores {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.colaboradores .card  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 50px 30px;
+}
+
+.colaboradores .card p {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    color: var(--neutral-600);
+}
+.colaboradores .card img {
+    width: 200px;
+}
