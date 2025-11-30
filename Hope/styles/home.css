@@ -185,6 +185,7 @@ header {
 .container-team h3 {
     font-size: var(--h3);
     letter-spacing: 1.2px;
+    margin-bottom: 10px;
 }
 
 .container-team span {
@@ -195,11 +196,12 @@ header {
 
 .colaboradores {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     max-width: 1440px;
     margin: 0 auto;
 }
+
 
 .colaboradores .card  {
     display: flex;
@@ -213,11 +215,119 @@ header {
 }
 
 .colaboradores .card p {
-    font-size: 20px;
+    font-size: 15px;
     font-family: sans-serif;
     text-align: center;
     color: var(--neutral-600);
+    line-height: var(--line-height);
 }
+
+.colaboradores .card span {
+    margin: 20px 0 12px 0;
+}
+
 .colaboradores .card img {
-    width: 200px;
+    width: 160px;
+}
+
+
+@media ( max-width : 840px ) {
+    .colaboradores {
+        grid-template-columns: 1fr;
+    }
+
+    .colaboradores .card h3 {
+        font-size: 17px;
+    } 
+
+    .colaboradores .card span {
+        font-size: 12px;
+    }
+    .colaboradores .card p {
+        font-size: 12px  
+    } 
+}
+
+.galery {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.galery .container .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.galery .container .images img {
+    width: 100%;
+    padding: 15px 15px 0;
+}
+
+.galery .container .images img:hover {
+    transform: scale(1.5);
+}
+
+@media ( max-width: 840px ) {
+
+    .galery .container .images {
+        grid-template-columns: 1fr;
+    } 
+}
+
+.footer-sec footer .container { 
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 100px 60px;
+}
+
+section.footer-sec {
+    background-color: var(--neutral-800);
+    color: white;
+    height: 500px;
+    margin-top: 20px;
+}
+
+footer .container h2 {
+    color: white;
+}
+
+footer .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 32px 0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+footer .icons {
+    margin-bottom: 80px;
+}
+
+footer .direitos {
+    display: flex;
+    font-family: sans-serif;
+}
+
+footer .direitos .garantidos { margin: 20px auto 0 0 ;}
+
+footer .direitos a {
+    padding-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+@media ( max-width: 840px ) {
+    
+    .footer-sec footer .container {
+        padding: 100px 100px 0 100px;
+    }
+
+    footer .direitos {
+        font-size: 12px
+    }
 }
