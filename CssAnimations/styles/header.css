@@ -1,0 +1,113 @@
+:root {
+    --bg-primary: #0f0f10;
+    --bg-secondary: #14141a;
+    --bg-card: #1c1c25;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --accent-primary: #6e56cf;
+    --accent-secondary: #9e7aff;
+    --accent-tertiary: #ff6bcb;
+    --gradient-primary: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-hover: linear-gradient(45deg, var(--accent-secondary), var(--accent-tertiary));
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.3);
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.5rem 10%;
+    position: fixed;
+    left: 0;
+    top: 0; 
+    width: 100%;
+    z-index: 90;
+    background-color: rgba(15, 15, 15, 0.8);
+    transition: all var(--transition-medium);
+
+    animation: fadeIn 0.8s linear;
+}
+
+header .css, header div {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px; 
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav ul li {
+    height: fit-content;
+}
+
+nav a {
+    font-weight: 500;
+    position: relative;
+    transition: color var(--transition-medium);
+}
+
+nav a:not(.contato)::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-medium);
+}
+
+nav a:not(.contato):hover {
+    color: var(--accent-primary);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+nav .contato {
+    background: var(--gradient-primary);
+    padding: .5rem 1.2rem;
+    border-radius: 30px;
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    top: 4px;
+    z-index: 1;
+}
+
+nav .contato::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-hover);
+    transition: all var(--transition-medium);
+    z-index: -1;
+}
+
+nav .contato:hover::before {
+    left: 0;
+}
+
+nav .contato:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(110, 86, 207, 0.3);
+}
