@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/CssAnimations/styles/header.css">
     <link rel="stylesheet" href="/CssAnimations/styles/hero.css">
     <link rel="stylesheet" href="/CssAnimations/styles/animations.css">
+    <link rel="stylesheet" href="/CssAnimations/styles/animation-section.css">
 
     <link rel="stylesheet" href="styles/about.css">
 
@@ -168,12 +169,107 @@
 
         </section>
 
-        <section class="exemplos">
-            <h1></h1>
-            <div class="container">
-                <div class="exemplo"></div>
-                <div class="exemplo"></div>
-                <div class="exemplo"></div>
+        <section id="animations" class="animations">
+            <h2 class="title">Tipos de <span class="gradient-text">Animações</span></h2>
+
+            <div class="animations-demo">
+
+                <div class="demo-card">
+                    <div class="demo-visual">
+                        <div class="demo-element fade-demo"></div>
+                    </div>
+
+                    <div class="code-text-all">                      
+                        <div class="demo-text">
+                            <h3>Fade In/Out</h3>
+                            <p>Transições suaves de opacidade para entradas e saídas elegantes</p>
+                        </div>
+                        <div class="demo-code">
+                            <pre><code>.fade {
+        animation: FadeIn 1s ease-in infinite;
+}
+    
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    }
+    
+    50% {
+    opacity: 1;
+    }
+    
+    100% {
+    opacity: 0;   
+    }                      
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-visual">
+                        <div class="demo-element slide-demo"></div>
+                    </div>
+
+                    <div class="code-text-all">                     
+                        <div class="demo-text">
+                            <h3>Slide</h3>
+                            <p>Movimentação de elementos de forma controlada</p>
+                        </div>
+                        <div class="demo-code">
+                            <pre><code>.fade {
+    animation: slideIn 1s ease-out infinite;
+}
+    
+@keyframes slideIn {
+    0% {
+    transform: translateX(-100%);
+    }
+    
+    50% {
+    transform: translateX(0);
+    }
+    
+    100% {
+    transform: translateX(-100%);  
+    }                    
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-card">
+                    <div class="demo-visual">
+                        <div class="demo-element scale-demo"></div>
+                    </div>
+
+                    <div class="code-text-all">
+                        <div class="demo-text">
+                            <h3>Scale</h3>
+                            <p>Alterações de tamanhos para destacar elementos importantes.</p>
+                        </div>
+                        <div class="demo-code">
+                            <pre><code>.fade {
+    animation: scale 2s infinite infinite;
+}
+    
+@keyframes scale {
+    0% {
+         transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.5); 
+    }
+    100% { 
+        transform: scale(1); 
+    }               
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
 
         </section>
@@ -181,4 +277,4 @@
     </main>
 
 </body>
-</html>
+</html> 

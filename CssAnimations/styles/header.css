@@ -34,7 +34,7 @@ header {
     background-color: rgba(15, 15, 15, 0.8);
     transition: all var(--transition-medium);
 
-    animation: fadeIn 0.8s linear;
+    animation: fadeInHeader 0.8s linear;
 }
 
 header .css, header div {
