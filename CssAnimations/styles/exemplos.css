@@ -1,0 +1,182 @@
+:root {
+    --bg-primary: #0f0f10;
+    --bg-secondary: #14141a;
+    --bg-card: #1c1c25;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --accent-primary: #6e56cf;
+    --accent-secondary: #9e7aff;
+    --accent-tertiary: #ff6bcb;
+    --gradient-primary: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-hover: linear-gradient(45deg, var(--accent-secondary), var(--accent-tertiary));
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.3);
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+.exemplos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 10%;
+    background-color: var(--bg-secondary);
+}
+
+.exemplos .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid .exemplo-card {
+    position: relative;
+    background: var(--bg-card);
+    margin: 2rem;
+    border-radius: var(--border-radius-md);
+    padding: 4rem 2rem;
+
+    transition: transform var(--transition-medium);
+}
+
+.card-grid .exemplo-card:hover {
+    transform: scale(1.09);
+}
+
+.card-grid .exemplo-card::before {
+    content: '';
+    position: absolute;
+    height: 1.4rem;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    border-top-left-radius: var(--border-radius-sm);
+    border-top-right-radius: var(--border-radius-sm);
+}
+
+.exemplo-card .header-exemplo .header-dot-one {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-tertiary);
+    top: 6px;
+    left: 6px;
+}
+
+.exemplo-card .header-exemplo .header-dot-two {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-primary);
+    top: 6px;
+    left: 20px;
+}
+
+.exemplo-card .header-exemplo .header-dot-three {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-secondary);
+    top: 6px;
+    left: 35px;
+}
+
+.exemplo-card .text-element {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.exemplo-card .text-element p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.exemplo-card .text-element .loading {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-primary);
+    border-top-color: var(--accent-secondary);
+
+    margin-bottom: 20px;
+
+    animation: loading 1s linear infinite;
+}
+
+.exemplo-card .text-element .btn {
+    color: white;
+    background: var(--gradient-primary);
+    padding: .9rem 1.2rem;
+    border-radius: 30px;
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    top: 4px;
+    z-index: 1;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.exemplo-card .text-element .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-hover);
+    transition: all var(--transition-medium);
+    z-index: -1;
+}
+
+.exemplo-card .text-element .btn:hover::before {
+    left: 0;
+}
+
+.exemplo-card .text-element .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(110, 86, 207, 0.3);
+}
+
+.text-element .menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+    gap: .5rem;
+    width: 40px;
+    margin: 0 auto 3rem;
+}
+
+.menu-item {
+    width: 100%;
+    height: 4px;
+    background: var(--accent-primary);
+    border-radius: 2px;
+    transition: all var(--transition-medium);
+}
+
+.menu-hamburguer:hover .menu-item:nth-child(1) {
+    transform: translateY(14px) rotate(45deg);
+}
+
+.menu-hamburguer:hover .menu-item:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer:hover .menu-item:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}

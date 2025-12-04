@@ -27,6 +27,10 @@
     -webkit-font-smothing: antialiased;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);

@@ -1,0 +1,94 @@
+:root {
+    --bg-primary: #0f0f10;
+    --bg-secondary: #14141a;
+    --bg-card: #1c1c25;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --accent-primary: #6e56cf;
+    --accent-secondary: #9e7aff;
+    --accent-tertiary: #ff6bcb;
+    --gradient-primary: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+    --gradient-hover: linear-gradient(45deg, var(--accent-secondary), var(--accent-tertiary));
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.3);
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+footer {
+    padding: 6rem 20%;
+    margin: 0 auto;
+    background: var(--bg-secondary);
+    position: relative;
+    width: 100vw;
+}
+
+.css,
+footer div.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container .cta-infos {
+    display: flex;
+    gap: 2rem;
+}
+
+.cta-infos .infos ul {
+    list-style: none;
+}
+
+
+.cta-infos .infos ul li:not(.title-li) {
+    font-size: 14px;
+    margin: 5px 0;
+    color: var(--text-secondary);
+}
+
+.cta-infos .infos ul li.title-li {
+    font-size: 20px;
+    color: var(--text-primary);
+    font-weight: bold;
+    margin-bottom: .9rem;
+    position: relative;
+}
+
+.cta-infos .infos ul li.title-li::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    background: var(--gradient-primary);
+}
+
+.cta-infos .infos ul li:not(.title-li):hover {
+    color: var(--accent-primary);
+    transition: transform var(--transition-medium);
+    transform: scale(1.09);
+}
+
+footer .direitos {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    border-top: .5px solid var(--text-secondary);
+    padding: 10px 0 0 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
