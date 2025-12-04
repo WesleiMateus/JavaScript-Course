@@ -1,0 +1,126 @@
+:root {
+    --brand-color: #1E9E6A;
+    --dark-scale-10: #1A202C;
+    --dark-scale-20: #656769;
+    --dark-scale-30: #E8E8E8;
+    --dark-scale-40: #F7FAFC ;
+    --white-color: #fff;
+
+    ---defoult-font: "Archivo", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(---defoult-font);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .apresentacao-img img {
+    max-height: 99.6vh;
+}
+
+.hero .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .container-form {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    gap: 1rem;
+}
+
+.container-form .text-form {
+    font-family: var(---defoult-font);
+    margin-bottom: .4rem;
+}
+
+.text-form h1 {
+    margin-top: .3rem;
+}
+
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.form-input label {
+    font-size: 20px
+}
+
+.form-input input {
+    padding: 10px;
+    background: var(--dark-scale-40);
+    outline: none;
+    border: 1px solid var(--dark-scale-30);
+}
+
+.container-form .remember{
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember .forgot-pwd, 
+a.forgot-pwd {
+    color: var(--brand-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+
+.container-form .btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.btn button {
+    padding: .9rem;
+    font-size: 17px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.btn .entrar {
+    margin-top: 2rem;
+    background-color: var(--brand-color);
+}
+
+.btn .enter-google {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+    background-color: var(--dark-scale-10);
+}
+
+
+.login .cadastro-user {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+}
