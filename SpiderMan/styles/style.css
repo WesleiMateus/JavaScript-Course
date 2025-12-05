@@ -1,0 +1,152 @@
+:root {
+    --brand-color: #EC1F1D;
+    --dark-scale-10: #111826;
+    --white-color: #fff;
+    --defoult-font: "Plus Jakarta Sans", sans-serif;
+    --bg-spider: #04041d;
+    --bg-description: #1118265f;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--defoult-font);
+}
+
+body {
+    background-color: var(--bg-spider);
+    background-image: url('../assets/bg.png');
+    color: var(--white-color);
+}
+
+header {
+    max-width: 100vw;
+}
+
+header .cta-header {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.cta-header .logo img {
+    height: 40px;
+}
+
+.cta-header .topicos,
+.cta-header .topicos ul {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    list-style: none;
+}
+
+.topicos ul a {
+    color: inherit;
+    text-decoration: none;
+    position: relative
+}
+
+.topicos ul a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(104, 43, 226, 0.373);
+
+    transition: width ease-in-out .2s;
+}
+
+.topicos ul a:hover::after {
+    width: 100%;
+}
+
+section.hero {
+    position: relative;
+    max-width: 100vw;
+    height: 92vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero .spider-img img {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 700px;
+    overflow: hidden;
+}
+
+.hero .hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    top: 40%;
+    transform: translateY(-50%);
+    gap: 2rem;
+}
+
+.hero .hero-container p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+button.btn {
+    all: unset;
+    padding: 1rem 3rem;
+    background-color: var(--brand-color);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    transition: all ease-in .2s;
+}
+
+.btn a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(159, 0, 0, 0.454);
+}
+
+.description {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--bg-description);
+    top: 40%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.description .card {
+    height: 150px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.card p.title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.card p {
+    font-size: 14px;
+}
