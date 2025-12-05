@@ -3,7 +3,7 @@
     --dark-scale-10: #1A202C;
     --dark-scale-20: #656769;
     --dark-scale-30: #E8E8E8;
-    --dark-scale-40: #F7FAFC ;
+    --dark-scale-40: #F7FAFC;
     --white-color: #fff;
 
     ---defoult-font: "Archivo", sans-serif;
@@ -16,9 +16,12 @@
     font-family: var(---defoult-font);
 }
 
+
 .hero {
     display: flex;
     justify-content: space-between;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 .hero .apresentacao-img img {
@@ -32,6 +35,7 @@
     flex-direction: column;
     width: 100%;
 }
+
 
 form {
     display: flex;
@@ -75,19 +79,18 @@ form .container-form {
     border: 1px solid var(--dark-scale-30);
 }
 
-.container-form .remember{
+
+.container-form .remember {
     display: flex;
     justify-content: space-between;
 }
 
-.remember .forgot-pwd, 
+.remember .forgot-pwd,
 a.forgot-pwd {
     color: var(--brand-color);
     font-weight: 500;
     text-decoration: none;
 }
-
-
 
 .container-form .btn {
     display: flex;
@@ -118,9 +121,41 @@ a.forgot-pwd {
     background-color: var(--dark-scale-10);
 }
 
-
 .login .cadastro-user {
     display: flex;
     justify-content: space-between;
     width: 380px;
+
+}
+
+@media (max-width: 768px) {
+
+    .apresentacao-img img {
+        display: none;
+    }
+
+    .hero .login {
+        padding: 10rem 10%;
+    }
+
+    form .container-form {
+        height: 400px;
+        width: 300px;
+    }
+
+    .login .cadastro-user {
+        justify-content: space-around;
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 840px) {
+
+    .apresentacao-img img {
+        display: none;
+    }
+
+    .hero .login {
+        padding: 10rem 10%;
+    }
 }
